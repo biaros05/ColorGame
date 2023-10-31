@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" >
+    <title>Color Game!</title>
+    <link rel="stylesheet" href = "./css/style.css"/>
+    <link rel="stylesheet" href = "./css/mobile.css"/>
+    <script src="js/main.js"></script>
+    <script src="js/board.js"></script>
+    <script src="js/setupForm.js"></script>
+    <script src="js/cheatcode.js"></script>
+    <script src="js/highscore.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Prabhjot/Bianca's Color Game</h1>
+    </header>
+    <section id="setup">
+        <h2>Game Setup</h2>
+        <form>
+            <div id="form-flex">
+                <fieldset class="input-group">
+                    <label for="name">Player Name</label>
+                    <input type="text" name="name" id="name" minlength="5" pattern="^[A-Za-z0-9 ]+" required>
+                </fieldset>
+                <fieldset class="input-group">
+                    <label for="size">Game Board Size</label>
+                    <input type="number" name="size" id="size" min="3" max="7" required>
+                </fieldset>
+                <fieldset class="input-group">
+                    <label for="color">Color</label>
+                    <select name="color" id="color" required>
+                        <option value="red">Red</option>
+                        <option value="green">Green</option>
+                        <option value="blue">Blue</option>
+                    </select>
+                </fieldset>
+                <fieldset class="input-group">
+                    <label for="difficulty">Difficulty</label>
+                    <input type="range" name="difficulty" id="difficulty" min="0" max="3" step="1">
+                </fieldset>
+            </div>
+            <button type="submit" id="form-button">Start Game!</button>
+        </form>
+    </section>
+    <main>
+        <section id="board">
+            <p id = "goal"></p>
+            <button type="button" disabled="true" id="guess-button">Submit your guess!</button>
+        </section>
+        <section id="score">
+            <h3>High Scores</h3>
+            <div class="player-score-group">
+                <div class="player-names">
+                    <h4>Names</h4>
+                    <ul id="name-list"></ul>
+                </div>
+                <div class="player-scores">
+                    <h4 id="score-header">Scores</h4>
+                    <ul id="score-list"></ul>
+                </div>
+            </div>
+            <button id="clear">Clear</button>
+        </section>
+    </main>
+    <footer>Copyright &copy; Prabhjot/Bianca</footer>
+</body>
+</html>

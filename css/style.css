@@ -1,0 +1,179 @@
+/** main page layout **/
+body, * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/** header **/
+
+header {
+    padding: 0.25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: beige;
+}
+
+/** game form **/
+
+#setup {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.15em;
+    margin: 0.5em 0;
+}
+
+#form-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    padding-inline: 1em;
+    margin: 0.5em 0;
+}
+
+.input-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    padding: 1em;
+    background-color: beige;
+    border-radius: 0.25em;
+    border: none;
+}
+
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 0.25em;
+}
+
+button {
+    width: 100%;
+}
+
+/** form validation styling **/
+
+input:invalid {
+    outline: none;
+    border-color: #fc3e3e;
+    box-shadow: 0 0 10px #fc3e3e;
+}
+
+/** main css for board **/
+
+main {
+    flex-grow: 1;
+    display: flex;
+    gap: 1em;
+}
+
+main section {
+    height: 100%;
+}
+
+#board {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.25em;
+}
+
+.row {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25em;
+}
+
+.tile {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column; /**/
+    align-items: center;
+    justify-content: center;
+}
+
+.selected {
+    border: 3px solid gold; 
+}
+
+#goal {
+    text-align: center;
+}
+
+/** main css for scores **/
+
+#score {
+    flex: 1;
+}
+
+#score h3 {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+.player-score-group {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 3em;
+    margin-top: 1em;
+}
+
+#clear {
+    margin-top: 1em;
+}
+
+/** footer **/
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3em;
+    font-weight: bold;
+    background-color: beige;
+}
+
+.notCheating p {
+    visibility: hidden;
+}
+
+.tile p {
+    background-color: rgb(155, 153, 153);
+    padding: 0 5px;
+    font-style: italic;
+}
+
+button {
+    background-color: white;
+    border: 2px solid rgb(197, 179, 130);
+    color: rgb(159, 137, 77);
+    border-radius: 5px;
+    padding: 2px;
+    transition: all 0.5s ease-in-out;
+}
+
+button:hover {
+    background-color: rgb(197, 179, 130);
+    color: white;
+    cursor: pointer;
+}
